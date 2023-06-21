@@ -11,10 +11,14 @@
 <body>
     <div class="contaner">
         <div class="row">
-            <div class="col-6">
-                <input type="text" id="idControler" placeholder="آیدی مورد نظر را وارد کنید" >
-                <input class="btn" type="button" value="جست و جو">
-                <button class="btn serchebtn" id="chek" role="button">جست و جو محصول</button>
+                <div class="form__group field col-6" >
+                    <input type="number" class="form__field" placeholder="آی دی" id='name' required />
+                    <label for="name" class="form__label">آی دی</label>
+                </div>
+                <div>
+                    <button class="serchebtn" role="button" id="chek"><span class="text">جست و جو محصول</span></button>
+                </div>
+                
             </div>
             <div id = tbl>
 
