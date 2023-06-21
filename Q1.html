@@ -6,24 +6,105 @@
     <link rel="stylesheet" href="Styles/bootstrap.min.css">
     <link rel="stylesheet" href="Styles/bootstrap-icons.min.css">
     <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/tbl.css">
     <title>Document</title>
 </head>
 <body>
     <div class="contaner">
-        <div class="row">
-                <div class="form__group field col-6" >
+        <div class="row justify-content-around align-items-center">
+                <div class="form__group field col-4" >
                     <input type="number" class="form__field" placeholder="آی دی" id='name' required />
                     <label for="name" class="form__label">آی دی</label>
                 </div>
-                <div>
-                    <button class="serchebtn" role="button" id="chek"><span class="text">جست و جو محصول</span></button>
+                <div class="col-4">
+                    <button class="serchebtn" role="button" id="chek"><span class="text">جست و جو </span></button>
                 </div>
-                
-            </div>
-            <div id = tbl>
-
-            </div>
         </div>
+        <div>
+            <main id ="table">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>
+                            ردیف
+                        </th>
+                        <th>
+                          نام محصول
+                        </th>
+                        <th>
+                            قیمت
+                        </th>
+                        <th>
+                            برند
+                        </th>
+                        <th>
+                            دسته بندی
+                        </th>
+                        <th>
+                            تصویر
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          Iacob Geaorgescu
+                        </td>
+                        <td>
+                          e-mail@test-email.com
+                        </td>
+                        <td class='select'>
+                          <a class='button' href='#'>
+                            Select
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-title='Provider Name'>
+                          Julius Neumann
+                        </td>
+                        <td data-title='E-mail'>
+                          e-mail@test-email.com
+                        </td>
+                        <td class='select'>
+                          <a class='button' href='#'>
+                            Select
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-title='Provider Name'>
+                          Christoph Koller
+                        </td>
+                        <td data-title='E-mail'>
+                          e-mail@test-email.com
+                        </td>
+                        <td class='select'>
+                          <a class='button' href='#'>
+                            Select
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-title='Provider Name'>
+                          Bram Lemmens
+                        </td>
+                        <td data-title='E-mail'>
+                          e-mail@test-email.com
+                        </td>
+                        <td class='select'>
+                          <a class='button' href='#'>
+                            Select
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </main>
+            </div>      
+    </div>
     </div>
 </body>
 </html>
+
+

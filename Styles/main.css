@@ -1,3 +1,6 @@
+body{
+  direction: rtl;
+}
 .serchebtn {
   align-items: center;
   background-image: linear-gradient(to right, #11998e,#38ef7d);
