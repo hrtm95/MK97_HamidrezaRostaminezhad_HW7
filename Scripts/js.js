@@ -1,6 +1,10 @@
 var baseAddres= "https://dummyjson.com/products/"
-var tbl = `<table>
-<thead>
+var tbl = `
+    <p colspan="7" class="text-center"> اطلاعاتی یافت نشد</p>
+`
+
+var head = `<table ">
+<thead >
   <tr>
     <th>ردیف</th>
     <th>نام</th>
@@ -11,13 +15,9 @@ var tbl = `<table>
     <th>تصویر</th>
   </tr>
 </thead>
-<tbody>
-  <tr>
-    <td colspan="7" class="text-center"> اطلاعاتی یافت نشد</td>
-  </tr>
-</tbody>
-</table>`
-
+<tbody>`
+ var footer =`</tbody>
+ </table>`
 
 
 try{
@@ -54,19 +54,7 @@ $('#table').append(tbl)
 
 function ShowData(products){
  
-   $('#table').append(`<table ">
-         <thead >
-           <tr>
-             <th>ردیف</th>
-             <th>نام</th>
-             <th>توضیحات</th>
-             <th>قیمت</th>
-             <th>برند</th>
-             <th>دسته بندی</th>
-             <th>تصویر</th>
-           </tr>
-         </thead>
-         <tbody>
+   $('#table').append(head+`
            <tr>
              <td>${products.id}</td>
              <td>${products.title}</td>
@@ -76,6 +64,5 @@ function ShowData(products){
              <td>${products.category}</td>
              <td><img src="${products.thumbnail}" width="150px"></img></td>
            </tr>
-         </tbody>
-       </table>`)
+`+footer)
 }
