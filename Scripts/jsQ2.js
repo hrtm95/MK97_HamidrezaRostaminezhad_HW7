@@ -17,33 +17,30 @@ $(document).ready(function (){
   });
 
 $('body').on('click','.deleteRow' , function(e)
-{
-  e.preventDefault();
-  
+{  
   $(this).parent().parent().remove();
 })
-$('body').on('click','.deleteAllRow' , function(e)
+$('body').on('click','#deleteAll' , function(e)
 {
-  e.preventDefault();
-  if(confirm('آیا تمام دیتا حذف شود؟'))
-  $('.row-data').remove();
+  if(confirm('Do you want delete all data'))
+  $('.data').remove();
 })
 function ShowData(products) {
   console.log(products)
   if (products == null) {
-    $('#table').append(`<p>وجود ندارد</p>`)
+    $('#table').append(`<p>Note data found</p>`)
   } else {
    
    products.forEach(element => {
-     $('#Fetch').append(`<div class="row-data" id="${element.id}">
+     $('#downloadData').append(`<div class="data" id="${element.id}">
       <div class="row align-items-center">
         <div class="col-11">
-          <spn>Title : ${element.title}</spn>
-          <p> Description :  ${element.description}</p>
+          <span class="boldtxt">Title : ${element.title}</span>
+          <p> <span class="boldtxt">Description : </span> ${element.description}</p>
         </div>
-        <a href="" data-id="${element.id}" class="col-1 deleteRow">
-          <i class="bi bi-trash-fill " style="font-size: 35px;"></i>
-        </a>
+        <button data-id="${element.id}" class="btn col-1 deleteRow">
+          <i class="bi bi-trash-fill icon"></i>
+        </button>
       </div>
     </div>`)
    });
